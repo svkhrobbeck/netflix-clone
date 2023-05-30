@@ -1,11 +1,9 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
-import { Header } from "../../components";
+import { Films, Header } from "../../components";
 import HeroBanner from "../../components/hero-banner/HeroBanner";
 
 const Home = () => {
-  const navigate = useNavigate();
   const { loggedIn } = useSelector(state => state.auth);
 
   return (
@@ -15,6 +13,7 @@ const Home = () => {
           <Header />
           <main className="main-content">
             <HeroBanner />
+            <Films />
           </main>
         </>
       ) : (
