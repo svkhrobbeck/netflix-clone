@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { Header } from "../../components";
@@ -17,7 +17,13 @@ const Home = () => {
             <HeroBanner />
           </main>
         </>
-      ) : null}
+      ) : (
+        <div className="please">
+          <Link className="please__btn button button--white" to={"/sign-in"}>
+            Please Sign In
+          </Link>
+        </div>
+      )}
     </>
   );
 };
