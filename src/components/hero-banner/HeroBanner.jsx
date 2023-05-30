@@ -4,11 +4,10 @@ import "./HeroBanner.scss";
 import { useEffect, useState } from "react";
 import moviesService from "../../service/movies";
 import request from "../../service/request";
+import { IMG_URL } from "../../constants";
 
 const HeroBanner = () => {
-  const [movie, setMovie] = useState({});
-
-  console.log(movie);
+  const [movie, setMovie] = useState(null);
 
   const getRandomNumber = max => {
     return Math.trunc(Math.random() * max);
@@ -24,7 +23,7 @@ const HeroBanner = () => {
   }, []);
 
   return (
-    <section className="hero-banner" style={{ backgroundImage: `url("https://image.tmdb.org/t/p/original${movie?.backdrop_path}")` }}>
+    <section className="hero-banner" style={{ backgroundImage: `url("${movie && IMG_URL}${movie && movie.backdrop_path}")` }}>
       <div className="hero-banner__inner">
         <div className="hero-banner__content">
           <h2 className="hero-banner__title">{movie?.original_name}</h2>
