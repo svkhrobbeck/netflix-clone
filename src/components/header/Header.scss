@@ -1,0 +1,32 @@
+.site-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+
+  &.site-header--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.logo {
+  max-width: 150px;
+}
+
+.logo__img {
+  width: 100%;
+  height: auto;
+}
+
+.site-header__logout-img {
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+}
