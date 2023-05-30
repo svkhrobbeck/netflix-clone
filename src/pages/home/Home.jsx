@@ -1,25 +1,23 @@
-import { signOut } from "firebase/auth";
-import { auth } from "../../firebase/firebase";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { userSignOut } from "../../slice/auth";
+import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { Header } from "../../components";
+import HeroBanner from "../../components/hero-banner/HeroBanner";
 
 const Home = () => {
   const navigate = useNavigate();
   const { loggedIn } = useSelector(state => state.auth);
 
-  useEffect(() => {
-    if (!loggedIn) {
-      navigate("/sign-in");
-    }
-  }, []);
-
   return (
     <>
-      <Header />
-      <main className="main-content container">Some</main>
+      {loggedIn ? (
+        <>
+          <Header />
+          <main className="main-content">
+            <HeroBanner />
+          </main>
+        </>
+      ) : null}
     </>
   );
 };
