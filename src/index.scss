@@ -94,3 +94,16 @@ body {
     opacity: 0.6;
   }
 }
+
+.please {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.please__btn {
+  padding: 10px 35px;
+  font-weight: 600;
+  font-size: 20px;
+}
