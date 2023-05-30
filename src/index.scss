@@ -69,7 +69,27 @@ body {
   display: flex;
   padding: 0;
   background-color: transparent;
+  text-align: center;
+  color: inherit;
   font-size: inherit;
   font-family: inherit;
   font-weight: inherit;
+  transition: opacity 0.5s ease;
+
+  &--white {
+    background-color: #fff;
+    color: #000;
+  }
+
+  &--black {
+    background-color: #000;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
