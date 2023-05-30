@@ -8,6 +8,10 @@
 
 .sign-in__logo {
   margin-bottom: 20px;
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  margin-top: -150px;
 }
 
 .sign-in__button {
@@ -15,13 +19,4 @@
   padding: 16px 55px;
   color: #cd1820;
   font-weight: 500;
-  transition: opacity 0.5s ease;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
 }
