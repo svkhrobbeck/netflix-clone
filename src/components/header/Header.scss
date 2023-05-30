@@ -1,19 +1,22 @@
+.site-header {
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  &.site-header--fixed {
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+  }
+}
+
 .site-header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 20px;
-
-  &.site-header--fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(10px);
-  }
 }
 
 .logo {
