@@ -26,7 +26,7 @@ const Home = () => {
       ) : (
         <div className="please">
           <Link className="please__btn button button--white" to={"/sign-in"}>
-            Please Sign In
+            You are not Signed in, please sign in
           </Link>
         </div>
       )}
