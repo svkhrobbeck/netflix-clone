@@ -1,0 +1,46 @@
+.films {
+  &:not(:last-child) {
+    margin-bottom: 75px;
+  }
+}
+
+.films__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 35px;
+  text-align: center;
+}
+
+.films__list {
+  display: flex;
+  gap: 0 10px;
+  justify-content: center;
+  max-width: 100%;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.films__img {
+  display: block;
+  max-width: 230px;
+  width: 100%;
+  height: auto;
+  flex-shrink: 1;
+  flex-grow: 1;
+
+  &--poster {
+    max-width: 250px;
+  }
+}
+
+.films__yt-player {
+  display: flex;
+  justify-content: center;
+
+  iframe {
+    max-width: 80%;
+    flex-grow: 1;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
