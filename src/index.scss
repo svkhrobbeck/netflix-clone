@@ -97,6 +97,7 @@ body {
 
 .please {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -111,6 +112,11 @@ body {
     background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
     z-index: 2;
   }
+}
+
+.please__text {
+  text-align: center;
+  z-index: 2;
 }
 
 .please__btn {
