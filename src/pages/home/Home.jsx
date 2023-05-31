@@ -27,7 +27,7 @@ const Home = () => {
         <div className="please">
           <p className="please__text">You are not Signed in, please sign in</p>
           <Link className="please__btn button button--white" to={"/sign-in"}>
-            Please Sign In
+            Sign In
           </Link>
         </div>
       )}
