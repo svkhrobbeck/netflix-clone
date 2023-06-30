@@ -10,7 +10,6 @@ import { getStorage } from "./utils/utils";
 import { userSignSuccess } from "./slice/auth";
 
 const App = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { loggedIn } = useSelector(state => state.auth);
 
