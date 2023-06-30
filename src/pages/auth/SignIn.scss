@@ -12,6 +12,14 @@
   width: 100%;
   height: auto;
   margin-top: -150px;
+
+  @media only screen and (max-width: 992px) {
+    max-width: 200px;
+  }
+
+  @media only screen and (max-width: 576px) {
+    max-width: 165px;
+  }
 }
 
 .sign-in__button {
@@ -19,4 +27,12 @@
   padding: 16px 55px;
   color: #cd1820;
   font-weight: 500;
+
+  @media only screen and (max-width: 992px) {
+    padding: 14px 30px;
+  }
+
+  @media only screen and (max-width: 576px) {
+    padding: 14px 20px;
+  }
 }
