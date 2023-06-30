@@ -1,7 +1,7 @@
 // pages
 import { SignIn, Home } from "./pages";
 
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
@@ -29,7 +29,7 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        {!loggedIn && <Route path="/sign-in" element={<SignIn />} />}
+        <Route path="/sign-in" element={loggedIn ? <Navigate to="/" /> : <SignIn />} />
       </Routes>
     </>
   );
