@@ -23,7 +23,6 @@ const SignIn = () => {
         // set LocalStorage
         setStorage("token", accessToken);
         setStorage("uid", uid);
-        console.log("user signed in");
         navigate("/");
       })
       .catch(error => {

@@ -15,10 +15,12 @@ const HeroBanner = () => {
     setMovie(results[getRandomNumber(results.length)]);
   };
 
-  useEffect(() => handleGetMovies(), []);
+  useEffect(() => {
+    handleGetMovies();
+  }, []);
 
   return (
-    <section className="hero-banner" style={{ backgroundImage: `url("${movie && IMG_URL}${movie && movie.backdrop_path}")` }}>
+    <section className="hero-banner" style={{ backgroundImage: `url("${!!movie && IMG_URL + movie.backdrop_path}")` }}>
       <div className="hero-banner__inner">
         <div className="hero-banner__content">
           <h2 className="hero-banner__title">{movie?.original_name}</h2>
