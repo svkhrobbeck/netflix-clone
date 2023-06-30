@@ -5,22 +5,17 @@ import { useEffect, useState } from "react";
 import moviesService from "../../service/movies";
 import request from "../../service/request";
 import { IMG_URL } from "../../constants";
+import { getRandomNumber } from "../../utils/utils";
 
 const HeroBanner = () => {
   const [movie, setMovie] = useState(null);
-
-  const getRandomNumber = max => {
-    return Math.trunc(Math.random() * max);
-  };
 
   const handleGetMovies = async () => {
     const { results } = await moviesService.getData(request.NetflixOriginals);
     setMovie(results[getRandomNumber(results.length)]);
   };
 
-  useEffect(() => {
-    handleGetMovies();
-  }, []);
+  useEffect(() => handleGetMovies(), []);
 
   return (
     <section className="hero-banner" style={{ backgroundImage: `url("${movie && IMG_URL}${movie && movie.backdrop_path}")` }}>
