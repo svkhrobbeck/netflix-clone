@@ -1,5 +1,4 @@
 import axios from "./api";
-import request from "./request";
 
 const moviesService = {
   async getData(url) {
