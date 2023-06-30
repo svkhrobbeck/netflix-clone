@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-import { useEffect, useState } from "react";
-import moviesService from "../../service/movies";
-import youtube from "react-youtube";
-import { Tooltip } from "@mui/material";
-
-const Films = ({ isLarge = false, title, request }) => {
-  const [movies, setMovies] = useState([]);
-  const [trailerUrl, setTrailerUrl] = useState("");
-
-  const handleGetMovies = async () => {
-    const { results } = await moviesService.getData(request);
-    setMovies(results);
-  };
-
-  useEffect(() => {
-    handleGetMovies();
-  }, []);
-
-  return <div>Films</div>;
-};
-
-export default Films;
-=======
 // style
 import "./Films.scss";
 
@@ -91,4 +67,3 @@ const Films = ({ isLarge = false, title, requestStr }) => {
 };
 
 export default Films;
->>>>>>> 410c153bfc1f44cdd110469d4626f52f7432afdb
